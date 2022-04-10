@@ -110,6 +110,7 @@ Route::middleware('checkAdmin')->group(function () {
 
         Route::prefix('message')->group(function () {
             Route::get('/', [MessageController::class, 'index']);
+            Route::get('delete/{id}', [MessageController::class, 'delete']);
         });
 
         Route::prefix('profile')->group(function () {

@@ -4,7 +4,7 @@
     <hr>
     @if (Session::has('status'))
         <div class="alert alert-warning" role="alert">
-                {{ Session::get('status') }}
+            {{ Session::get('status') }}
         </div>
     @endif
 
@@ -19,16 +19,17 @@
             </tr>
         </thead>
         @foreach ($data as $cat)
-        <tr>
-            <td>{{$cat->name}}</td>
-            <td>{{$cat->email}}</td>
-            <td>{{$cat->subject}}</td>
-            <td>{{$cat->message}}</td>
-            <td>
+            <tr>
+                <td>{{ $cat->name }}</td>
+                <td>{{ $cat->email }}</td>
+                <td>{{ $cat->subject }}</td>
+                <td>{{ $cat->message }}</td>
+                <td>
 
-                <a href="{{ url('admin/message/delete/'.$cat->id) }}" class="btn btn-danger btn-md"><i class="fas fa-trash"></i> Delete</a>
-            </td>
-        </tr>
+                    <a href="{{ url('admin/message/delete/' . $cat->id) }}" class="btn btn-danger btn-md"><i
+                            class="fas fa-trash"></i> Delete</a>
+                </td>
+            </tr>
         @endforeach
 
     </table>
