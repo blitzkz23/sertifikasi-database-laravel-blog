@@ -16,7 +16,7 @@ class CreateInfosTable extends Migration
         Schema::create('infos', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->string('info_title');
-            $table->string('info_content');
+            $table->text('info_content');
             $table->string('status');
             $table->timestamps();
         });

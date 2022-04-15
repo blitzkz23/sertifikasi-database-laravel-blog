@@ -27,6 +27,7 @@ class RunningtextController extends Controller
         if ($cat) {
             return redirect('admin/runningtext')->with('status', 'Berhasil menambah data !');
         }
+        return redirect('admin/runningtexts')->with('status', 'Gagal menambah data !');
     }
 
     public function edit($id)

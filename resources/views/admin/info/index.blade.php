@@ -23,7 +23,7 @@
             <tr>
                 <td>{{ $info->info_title }}</td>
                 <td>{{ $info->info_content }}</td>
-                <td>{{ $info->status }}</td>
+                <td>{{ $info->status ? 'publish' : 'tidak publish' }}</td>
                 <td>
                     <a href="{{ url('admin/info/edit/' . $info->id) }}" class="btn btn-primary btn-md"><i
                             class="far fa-edit"></i> Edit</a>

@@ -27,6 +27,7 @@ class InfoController extends Controller
         if ($cat) {
             return redirect('admin/info')->with('status', 'Berhasil menambah data !');
         }
+        return redirect('admin/info')->with('status', 'Gagal menambah data !');
     }
 
     public function edit($id)
